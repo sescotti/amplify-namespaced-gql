@@ -1,0 +1,11 @@
+{
+	"name": "Node.js & TypeScript",
+
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"AMPLIFY_VERSION": "12.8.2"
+		}
+	}
+
+}

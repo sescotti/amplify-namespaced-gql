@@ -1,0 +1,43 @@
+type Customer {
+  id: ID!
+  name: String!
+}
+
+input CreateCustomerInput {
+  name: String!
+}
+
+type CustomerQueries {
+  get(id: ID!): Customer!
+}
+
+type CustomerMutations {
+  create(input: CreateCustomerInput!): Customer!
+}
+
+type Order {
+  id: ID!
+  name: String!
+}
+
+input CreateOrderInput {
+  name: String!
+}
+
+type OrderQueries {
+  get(id: ID!): Order!
+}
+
+type OrderMutations {
+  create(input: CreateOrderInput!): Order!
+}
+
+type Query {
+  customer: CustomerQueries
+  order: OrderQueries
+}
+
+type Mutation {
+  customer: CustomerMutations
+  order: OrderMutations
+}
